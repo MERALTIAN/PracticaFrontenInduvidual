@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Tarjeta from '../components/catalogo/Tarjeta';
+import Tarjeta from '../Tarjeta';
 
 const CatalogoProductos = () => {
   const [listaProductos, setListaProductos] = useState([]);
