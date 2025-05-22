@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import logo from "/vite.svg"; // Importación del logo de la ferretería
 import "bootstrap-icons/font/bootstrap-icons.css"; // Importación de íconos de Bootstrap
+import { NavDropdown } from "react-bootstrap";
 import "../../App.css";
 
 // Estilos personalizados de la aplicación
@@ -88,13 +89,7 @@ const Encabezado = () => {
                 <strong>Inicio</strong>
               </Nav.Link>
 
-              <Nav.Link
-                onClick={() => navegarA("/categorias")}
-                className={estaColapsado ? "text-black" : "text-white"}
-              >
-                {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
-                <strong>Categorias</strong>
-              </Nav.Link>
+              
 
               <Nav.Link
                 onClick={() => navegarA("/clientes")}
@@ -120,13 +115,42 @@ const Encabezado = () => {
                 <strong>Compras</strong>
               </Nav.Link>
 
-              <Nav.Link
-                onClick={() => navegarA("/productos")}
-                className={estaColapsado ? "text-black" : "text-white"}
-              >
-                {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
-                <strong>Productos</strong>
-              </Nav.Link>
+               <NavDropdown 
+  title={
+    <span>
+      {estaColapsado && <i className="bi-bag-heart-fill me-2"></i>}
+      Productos
+    </span>
+  }
+  id="basic-nav-dropdown"  
+  className={estaColapsado ? "titulo-negro" : "titulo-blanco"}
+>
+  <NavDropdown.Item
+    onClick={() => navegarA("/productos")}
+    className="text-black"
+  >
+    {estaColapsado ? <i className="bi-box2-heart-fill me-2"></i> : null}
+    <strong>Gestion Produtos</strong>
+  </NavDropdown.Item>
+
+  <NavDropdown.Item
+    className="text-black"
+    onClick={() => navegarA("/categorias")}
+  >
+    {estaColapsado ? <i className="bi-bookmarks-fill me-2"></i> : null}
+    <strong>Gestion Categorias</strong>
+  </NavDropdown.Item>
+
+  <NavDropdown.Item
+    onClick={() => navegarA("/catalogoproductos")}
+    className="text-black"
+  >
+    {estaColapsado ? <i className="bi-images me-2"></i> : null}
+    <strong>Catalogo Productos</strong>
+  </NavDropdown.Item>
+
+</NavDropdown>
+
 
               <Nav.Link
                 onClick={() => navegarA("/usuarios")}
@@ -144,13 +168,7 @@ const Encabezado = () => {
                 <strong>Empleados</strong>
               </Nav.Link>
 
-              <Nav.Link
-                onClick={() => navegarA("/catalogoProductos")}
-                className={estaColapsado ? "text-black" : "text-white"}
-              >
-                {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
-                <strong>catalogo</strong>
-              </Nav.Link>
+              
 
               <Nav.Link
                 onClick={() => navegarA("/Estadisticas")}
