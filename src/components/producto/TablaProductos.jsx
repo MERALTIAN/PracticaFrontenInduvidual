@@ -23,6 +23,7 @@ const TablaProductos = ({
     return <div>Error: {error}</div>;
   }
 
+
   return (
     <>
       <Table striped bordered hover responsive>
