@@ -5,8 +5,6 @@ import Chart from 'chart.js/auto';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
-
-
 const VentasPorMes = ({ meses, totales_por_mes }) => {
   const chartRef = useRef(null);
   const data = {
@@ -64,7 +62,7 @@ const VentasPorMes = ({ meses, totales_por_mes }) => {
     },
   };
 
-  const generarPDF = () => {
+const generarPDF = () => {
 const doc = new jsPDF( );
 
 // Encabezado
