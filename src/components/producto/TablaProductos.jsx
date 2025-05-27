@@ -11,6 +11,7 @@ const TablaProductos = ({
   elementosPorPagina,
   paginaActual,
   establecerPaginaActual,
+  generarPDFDetalleProducto,
   abrirModalEliminacion,
   abrirModalEdicion
 }) => {
@@ -57,6 +58,14 @@ const TablaProductos = ({
     'Sin imagen'
   )}
 </td>
+ <Button
+        size="sm"
+        variant="outline-secondary"
+        className="me-2"
+        onClick={() => generarPDFDetalleProducto(producto)}
+      >
+        <i className="bi bi-filetype-pdf"></i>
+      </Button>
               <td>
                 <Button
                   variant="outline-danger"
