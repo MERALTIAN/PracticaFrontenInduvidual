@@ -36,7 +36,7 @@ const App = () => {
             <Route path="/compras" element={<RutasProtegida vista={<Compras />} />} />
             <Route path="/usuarios" element={<RutasProtegida vista={<Usuarios />} />} />
             <Route path="/empleados" element={<RutasProtegida vista={<Empleados />} />} />
-            <Route path="/catalogo" element={<RutasProtegida vista={<CatalogoProductos />} />} />
+            <Route path="/CatalogoProductos" element={<RutasProtegida vista={<CatalogoProductos />} />} />
             <Route path="/dashboard" element={<RutasProtegida vista={<Dashboard />} />} />
             <Route path="/estadisticas" element={<RutasProtegida vista={<Estadistica />} />} />
 
